@@ -55,6 +55,7 @@ conda env create -f environment.yaml
 **Step 1: Download Checkpoints**
 
 - Download the [[dit4sr_f and dit4sr_q](https://huggingface.co/acceptee/DiT4SR)] checkpoints and place them in the following directories: `preset/dit4sr_f` and `preset/dit4sr_q`.
+- Download the [[dit4sr_r1](https://huggingface.co/acceptee/DiT4SR)] checkpoints and place them in the following directories: `preset/dit4sr_r1`. (revised version)
 - Download the [[stable-diffusion-3.5-medium](https://huggingface.co/stabilityai/stable-diffusion-3.5-medium)] checkpoints and place it in the `preset/stable-diffusion-3.5-medium` directory.
 - Download the [[clip-vit-large-patch14-336](https://huggingface.co/openai/clip-vit-large-patch14-336)] and [[
 llava-v1.5-13b](https://huggingface.co/liuhaotian/llava-v1.5-13b)] and place them in the `llava_ckpt` directory.
@@ -70,10 +71,10 @@ Thanks for their awesome works.
 
 ```bash
 # test w/o llava, one GPU is enough
-bash bash/test_wllava.sh
+bash bash/test_wollava.sh
 
 # test w/ llava, two GPUs are required
-bash bash/test_wollava.sh
+bash bash/test_wllava.sh
 ```
 Replace the placeholders `[pretrained_model_name_or_path]`, `[transformer_model_name_or_path]`, `[image_path]`, `[output_dir]`, and `[prompt_path]` with their respective paths before running the command.
 The evaluation script (`test_wollava.sh`) is designed to run with pre-generated prompts in order to reduce the computational cost of LLaVA during testing.
