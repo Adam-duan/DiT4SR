@@ -104,7 +104,7 @@ Download the training datasets including `DIV2K`, `DIV8K`, `Flickr2K`, `Flickr8K
 
 - Following [[SeeSR](https://github.com/cswry/SeeSR)], you can generate the LR-HR pairs for training using `bash_data/make_pairs.sh`.
 - Using `bash_data/make_prompt.sh` to generate the prompts for each HR image.
-- Using `bash_data/make_latent.sh` to generate the latent codes for both HR and LR images.
+- Using `bash_data/make_latent.sh` to generate the latent codes for both HR and LR (sr_bicubic) images.
 - Using `bash_data/make_embedding.sh` to generate the embedding for each prompt.
 - Don't forget to download [[NULL_pooled_prompt_embeds.pt and NULL_prompt_embeds.pt](https://huggingface.co/acceptee/DiT4SR)] and place them in the corresponding directories.
 
